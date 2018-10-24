@@ -1,0 +1,9 @@
+.container{
+    border: 10px solid #137CBD;
+    box-sizing: border-box;
+}
+
+.inner{
+    border: 10px solid #DB3737;
+    box-sizing: border-box;
+}
