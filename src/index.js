@@ -46,8 +46,8 @@ type DetectElementResize = {
 };
 
 type State = {
-    height: ?number,
-    width: ?number,
+    height: number,
+    width: number,
 };
 
 class SizeMe extends React.Component<Props, State> {
@@ -63,8 +63,8 @@ class SizeMe extends React.Component<Props, State> {
     _elementResizeDetector: DetectElementResize;
 
     state = {
-        width: this.props.defaultHeight || null,
-        height: this.props.defaultHeight || null,
+        width: this.props.defaultHeight || 0,
+        height: this.props.defaultHeight || 0,
     };
 
     _resizeListener = (element: HTMLElement) => {
@@ -101,19 +101,17 @@ class SizeMe extends React.Component<Props, State> {
         const { width, height } = this.state;
 
         if (typeof children === 'function') {
-            if (width !== null && height !== null) {
-                const params = {};
-                if (!disableHeight) {
-                    params.height = height;
-                }
-                if (!disableWidth) {
-                    params.width = width;
-                }
-
-                onResize(params);
-
-                return children(params);
+            const params = {};
+            if (!disableHeight) {
+                params.height = height;
             }
+            if (!disableWidth) {
+                params.width = width;
+            }
+
+            onResize(params);
+
+            return children(params);
         }
     }
 
