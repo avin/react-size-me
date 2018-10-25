@@ -1,6 +1,6 @@
 # react-size-me
 
-> React components for determine parent container size
+> React component to determine parent container size
 
 [![NPM registry](https://img.shields.io/npm/v/@avinlab/react-size-me.svg?style=for-the-badge)](https://yarnpkg.com/en/package/@avinlab/react-size-me) [![NPM license](https://img.shields.io/badge/license-mit-red.svg?style=for-the-badge)](LICENSE)
 
