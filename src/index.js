@@ -82,6 +82,8 @@ class SizeMe extends React.Component<Props, State> {
         ) {
             this._parentNode = this._root.parentNode;
 
+            this._parentNode.style.overflow = 'hidden';
+
             this._elementResizeDetector = elementResizeDetectorMaker({
                 strategy: 'scroll',
             });
@@ -120,10 +122,16 @@ class SizeMe extends React.Component<Props, State> {
     render() {
         const { style, className } = this.props;
 
+        const containerStyle = {
+            width: 0,
+            height: 0,
+            overflow: 'visible',
+        };
+
         return (
-            <span {...{ style, className }} ref={i => (this._root = i)}>
+            <div {...{ style: { ...containerStyle, ...style }, className }} ref={i => (this._root = i)}>
                 {this._renderContent()}
-            </span>
+            </div>
         );
     }
 }

@@ -9,7 +9,7 @@ storiesOf('SizeMe', module).add('resize', () => (
     <div className="container">
         <SizeMe>
             {({ width, height }) => (
-                <div className="inner" style={{ width, height }}>
+                <div className="inner" style={{ width, height: height }}>
                     <p>Try to change window size!</p>
                     <div>
                         Width: <strong>{width}</strong>
