@@ -1,5 +1,5 @@
 {
-    "name": "react-size-me",
+    "name": "@avinlab/react-size-me",
     "version": "1.0.0",
     "description": "React components for determine container size",
     "author": "Avin Grape <carcinogen75@gmail.com> (https://github.com/avin/)",
