@@ -59,7 +59,7 @@ class SizeMe extends React.Component<Props, State> {
     };
 
     _root: ?HTMLElement;
-    _parentNode: ?HTMLElement;
+    _parentNode: HTMLElement;
     _elementResizeDetector: DetectElementResize;
 
     state = {
@@ -67,7 +67,7 @@ class SizeMe extends React.Component<Props, State> {
         height: this.props.defaultHeight || 0,
     };
 
-    _resizeListener = (element: HTMLElement) => {
+    _handleResize = (element: HTMLElement) => {
         this.setState({
             width: element.clientWidth,
             height: element.clientHeight,
@@ -86,13 +86,15 @@ class SizeMe extends React.Component<Props, State> {
                 strategy: 'scroll',
             });
 
-            this._elementResizeDetector.listenTo(this._parentNode, this._resizeListener);
+            this._elementResizeDetector.listenTo(this._parentNode, this._handleResize);
+
+            this._handleResize(this._parentNode);
         }
     }
 
     componentWillUnmount() {
         if (this._elementResizeDetector && this._parentNode) {
-            this._elementResizeDetector.removeListener(this._parentNode, this._resizeListener);
+            this._elementResizeDetector.removeListener(this._parentNode, this._handleResize);
         }
     }
 
