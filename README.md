@@ -2,7 +2,11 @@
 
 > React components for determine parent container size
 
-[![NPM registry](https://img.shields.io/npm/v/react-size-me.svg?style=for-the-badge)](https://yarnpkg.com/en/package/react-size-me) [![Travis](https://img.shields.io/badge/ci-travis-green.svg?style=for-the-badge)](https://travis-ci.org/bvaughn/react-size-me) [![NPM license](https://img.shields.io/badge/license-mit-red.svg?style=for-the-badge)](LICENSE)
+[![NPM registry](https://img.shields.io/npm/v/@avinlab/react-size-me.svg?style=for-the-badge)](https://yarnpkg.com/en/package/@avinlab/react-size-me) [![NPM license](https://img.shields.io/badge/license-mit-red.svg?style=for-the-badge)](LICENSE)
+
+## Demo
+
+Here is an [examples page](https://avin.github.io/react-size-me)
 
 ## Install
 
