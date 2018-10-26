@@ -122,14 +122,8 @@ class SizeMe extends React.Component<Props, State> {
     render() {
         const { style, className } = this.props;
 
-        const containerStyle = {
-            width: 0,
-            height: 0,
-            overflow: 'visible',
-        };
-
         return (
-            <div {...{ style: { ...containerStyle, ...style }, className }} ref={i => (this._root = i)}>
+            <div {...{ style, className }} ref={i => (this._root = i)}>
                 {this._renderContent()}
             </div>
         );

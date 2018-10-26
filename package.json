@@ -1,6 +1,6 @@
 {
     "name": "@avinlab/react-size-me",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "description": "React component to determine parent container size",
     "author": "Avin Grape <carcinogen75@gmail.com> (https://github.com/avin/)",
     "contributors": [
