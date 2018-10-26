@@ -10,7 +10,6 @@ type Size = {
 
 type Props = {
     /** Function responsible for rendering children.*/
-    //children: Size => React.Element<*>,
     children: Size => React.Element<*>,
 
     /** Optional custom CSS class name to attach to root AutoSizer element.  */
